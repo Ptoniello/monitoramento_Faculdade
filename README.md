@@ -10,6 +10,7 @@ https://github.com/Ptoniello/monitoramento_Faculdade.git
 
 Instruções para enviar dados para o BD:
 - necessário ter curl instalado
+- Iniciar o servidor utilizando "node server.js"
 
 Enviar informações:
   curl -X POST -H "Content-Type: application/json" -d '{

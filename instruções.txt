@@ -1,0 +1,17 @@
+para mandar alguma informação pro servidor, envie:
+curl -X POST -H "Content-Type: application/json" -d '{
+  "deviceId": "motor-01",
+  "vibration": 2.5,
+  "temperature": 65,
+  "humidity": 45,
+  "accX": 0.1,
+  "accY": -0.2,
+  "accZ": 1.1,
+  "timestamp": 1717023689
+}' http://localhost:3000/api/sensor
+
+Para verificação, envie:
+curl http://localhost:3000/api/sensor
+
+para helth check, envie:
+curl http://localhost:3000/health

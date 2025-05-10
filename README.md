@@ -10,6 +10,8 @@ https://github.com/Ptoniello/monitoramento_Faculdade.git
 
 Instruções para enviar dados para o BD:
 - necessário ter curl instalado
+- se necessário, usar o comando 'npm install', para a 
+  criação do diretório node_modules
 - Iniciar o servidor utilizando "node server.js"
 
 Enviar informações:

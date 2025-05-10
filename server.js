@@ -7,6 +7,20 @@ const app = express();
 const PORT = 3000;
 
 // ======================================
+// Integrantes do grupo
+// ======================================
+const integrantes = [
+  'Leonardo Cartaxo',
+  'Laura Neres',
+  'Pedro Toniello',
+  'Gustavo Malfi Costa',
+  'Gabriel Tavares Reis',
+  'Sara Martins de Almeida',
+  'Lucas Reis de Souza',
+  'Ryan Baltazar Silva'
+];
+
+// ======================================
 // Configuração do Banco de Dados
 // ======================================
 const sequelize = new Sequelize('motor_monitoring', 'node_user', 'node_pass', {
@@ -105,8 +119,17 @@ app.get('/', (req, res) => {
     endpoints: [
       { method: "POST", path: "/api/sensor", description: "Envia dados do sensor" },
       { method: "GET", path: "/api/sensor", description: "Recupera últimos 100 registros" },
-      { method: "GET", path: "/health", description: "Verifica status do servidor" }
+      { method: "GET", path: "/health", description: "Verifica status do servidor" },
+      { method: "integrantes", path: "/integrantes", description: "Integrantes do nosso grupo" }
     ]
+  });
+});
+
+//Integrantes
+app.get('/integrantes', (req, res) => {
+  res.json({
+    success: true,
+    members: integrantes
   });
 });
 
